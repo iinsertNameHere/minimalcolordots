@@ -1,0 +1,20 @@
+dconf/
+autostart/
+btop/
+gtk-3.0/
+htop/
+kazam/
+kde.org/
+Mullvad VPN/
+neofetch/
+pulse/
+rofi/
+session/
+systemd/
+VSCodium/
+waypaper/
+xarchiver/
+dolphinrc
+filetypesrc
+QtProject.conf
+trashrc

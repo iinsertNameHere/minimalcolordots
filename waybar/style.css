@@ -1,0 +1,114 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "BigBlueTerm437 Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    /* background-color: rgba(32, 32, 32, 0.685); */
+    background: transparent;
+    color: white;
+    border-radius: 15px;
+}
+
+#window {
+    font-weight: bold;
+}
+
+#workspaces button {
+    background: transparent;
+    background-color: transparent;
+    color: #b1b1b1;
+}
+
+#workspaces button.active {
+    background: transparent;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 900;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
+    padding-top: 2px;
+    padding-left: 15px;
+    padding-right: 18px;
+    margin-left: 5px;
+    border: 1px solid #b1b1b1;
+    border-radius: 15px;
+    background-color: rgba(32, 32, 32, 0.685);
+}
+
+#workspaces {
+    padding-left: 15px;
+    padding-right: 18px;
+    margin-left: 5px;
+    border: 1px solid #b1b1b1;
+    border-radius: 15px;
+    background-color: rgba(32, 32, 32, 0.685);
+}
+
+#clock {
+    font-weight: 800;
+}
+
+#battery.charging {
+    color: white;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#network {
+}
+
+#network.disconnected {
+    color: #cfac38
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+}
+
+#custom-spotify {
+    color: rgb(102, 220, 105);
+}
+
+#tray {
+}

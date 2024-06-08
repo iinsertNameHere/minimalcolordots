@@ -1,0 +1,60 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+  "margin": 5,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["sway/window"],
+  "modules-right": ["pulseaudio", "network", "battery", "tray", "clock"],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": []
+    },
+    "format-icons": {
+      "default": "",
+      "active": "󰫢"
+    }
+  },
+  "tray": {
+      "icon-size": 21,
+      "spacing": 10
+  },
+  "clock": {
+      "format-alt": "{:%Y-%d-%m}"
+  },
+  "battery": {
+      "interval": 5,
+      "states": {
+          "warning": 20,
+          "critical": 15
+      },
+      "format": "{capacity}% {icon}",
+      "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+      "on-click": "kitty nmtui",
+      "format-wifi": "{signalStrength}% ",
+      "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+      "format-disconnected": "Disconnected ⚠"
+  },
+  "pulseaudio": {
+      "format": "{volume}% {icon}",
+      "format-bluetooth": "{volume}% {icon}",
+      "format-muted": "",
+      "format-icons": {
+          "headphones": "",
+          "handsfree": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", ""]
+      },
+      "on-click": "pavucontrol"
+  }
+}
